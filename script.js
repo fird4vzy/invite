@@ -210,8 +210,8 @@
 
     // 04 · тема переключается не кнопкой, а местом в истории
     var root = document.documentElement;
-    var dark  = { bg: "#3E2033", fg: "#FFF5F0" };
-    var light = { bg: "#FFF5F0", fg: "#3E2033" };
+    var dark  = { bg: "#3B0A1B", fg: "#FCF3EF" };
+    var light = { bg: "#FCF3EF", fg: "#3B0A1B" };
     var apply = function (t) {
       root.style.setProperty("--bg", t.bg);
       root.style.setProperty("--fg", t.fg);
@@ -255,7 +255,7 @@
 
     // В покое краски остаются слегка разведёнными — иначе сигнатурный
     // приём виден только во время быстрого скролла, то есть почти никогда.
-    var REST = 4.5;
+    var REST = 2.6;
     var target = 0, current = 0;
 
     ScrollTrigger.create({
@@ -424,7 +424,7 @@
       size: 1.4,
       animate: true,
       props: ["circle", "square", "triangle", "line"],
-      colors: [[255, 92, 158], [169, 139, 255], [62, 32, 51], [255, 213, 204]],
+      colors: [[232, 40, 79], [168, 20, 58], [59, 10, 27], [240, 210, 201]],
       clock: 25,
       rotate: true,
       start_from_edge: true,

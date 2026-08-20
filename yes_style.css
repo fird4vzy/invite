@@ -1,74 +1,103 @@
+/* ============================================================
+   4ManuU — страница «да»
+   ============================================================ */
+:root {
+  --paper:   #FCF3EF;
+  --paper-2: #F6E3DC;
+  --ink:     #3B0A1B;
+  --wine:    #A8143A;
+  --cherry:  #E8284F;
+  --mx: 2.6px;
+  --my: 1.2px;
+  --pad: clamp(20px, 5vw, 80px);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #F8C8DC;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Nunito', -apple-system, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
-.header_text {
-    font-family: 'Nunito';
-    font-size: 50px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 0px;
+img { max-width: 100%; height: auto; display: block; }
+::selection { background: var(--cherry); color: var(--paper); }
+
+.grain {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: .45;
+  mix-blend-mode: multiply;
 }
 
-.gif_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+canvas#confetti-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
 
-canvas { pointer-events: none; position: absolute; top:0; left:0; width:100%; height:100%; z-index:1000; }
-#confetti-canvas {
-    width: 0%;
-    height: 0%;
+.yes {
+  position: relative;
+  z-index: 2;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 4vw, 36px);
+  padding: clamp(28px, 6vw, 56px) var(--pad);
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(18px, 2vw, 22px);
+  opacity: .65;
+}
+
+.display {
+  font-family: 'Comfortaa', 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: clamp(38px, 11vw, 130px);
+  line-height: 1.02;
+  letter-spacing: -.02em;
+}
+
+/* та же сигнатура, что и на главной */
+.misreg { position: relative; display: inline-block; }
+.misreg::before,
+.misreg::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+.misreg::before { color: var(--wine); transform: translate(calc(var(--mx) * -1), calc(var(--my) * -1)); }
+.misreg::after  { color: var(--cherry);   transform: translate(var(--mx), var(--my)); }
+
+.plate {
+  background: var(--paper-2);
+  border: 1px solid rgba(59, 10, 27, .3);
+  padding: 12px;
+  width: min(84vw, 400px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
   }
-
-  .octo-arm {
-    animation: rotateTail 2s ease-in-out infinite;
-  }
-
-  @keyframes rotateTail {
-    0% {
-      transform: rotate(0);
-    }
-    20% {
-      transform: rotate(20deg);
-    }
-    40% {
-      transform: rotate(0deg);
-    }
-    60% {
-      transform: rotate(-20deg);
-    }
-    80% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(0);
-    }
-  }
-
-
-
-  @media screen and (max-width: 1920px) {
-    header {
-      font-size: 1.5rem;
-    }
-    main {
-      padding: 1rem;
-    }
-    .gif-container {
-      /* margin-top: 20px; */
-      margin-bottom: 0.5rem;
-    }
-    button {
-      padding: 0.5rem 1rem;
-      margin: 0.5rem;
-      font-size: 1rem;
-    }
-  }
+  .grain, canvas#confetti-canvas { display: none; }
+}
