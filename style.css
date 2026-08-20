@@ -186,12 +186,6 @@ section { position: relative; padding: clamp(64px, 10vh, 130px) var(--pad); }
   box-shadow: 0 0 0 1px rgba(232, 40, 79, .14);
 }
 .hero-art__stage img { width: 68%; }
-.hero-art figcaption {
-  font-family: 'Caveat', cursive;
-  font-size: 19px;
-  color: var(--ink);
-  opacity: .55;
-}
 
 .hero h1 { font-size: clamp(30px, 5.6vw, 66px); }
 .hero__sub {
