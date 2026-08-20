@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js no-gsap">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>4ManuU</title>
+    <meta name="description" content="Yeeeyyyy!!" />
+    <meta name="theme-color" content="#FF5C9E" />
+    <link rel="stylesheet" href="./yes_style.css">
+    <link rel="icon" href="https://em-content.zobj.net/source/skype/289/red-heart_2764-fe0f.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Comfortaa:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script>document.documentElement.classList.remove('no-js');</script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H87QDWEFC6"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H87QDWEFC6');
+ </script>
+</head>
+<body>
+
+<svg class="grain" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  <rect width="100%" height="100%" filter="url(#noise)" opacity="0.3"/>
+</svg>
+
+<canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+<main class="yes">
+  <div class="eyebrow">она сказала да</div>
+  <h1 class="display"><span class="misreg" data-text="Yeeeyyyy!!">Yeeeyyyy!!</span></h1>
+  <figure class="plate">
+    <img src="yes.gif" alt="Cute animated illustration" decoding="async">
+  </figure>
+</main>
+
+<!-- defer, чтобы медленный CDN не держал отрисовку; порядок выполнения сохраняется -->
+<script defer src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+<script defer src="script.js"></script>
+</body>
+</html>

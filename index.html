@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js no-gsap">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>4ManuU</title>
+    <meta name="description" content="Хочу пригласить тебя на встречу 😊">
+    <meta name="theme-color" content="#FFF5F0">
+    <link rel="icon" href="https://em-content.zobj.net/source/skype/289/red-heart_2764-fe0f.png" type="image/x-icon" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Привет Манзураа">
+    <meta property="og:description" content="Хочу пригласить тебя на встречу 😊">
+    <meta property="og:image" content="hero.gif">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Comfortaa:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script>document.documentElement.classList.remove('no-js');</script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H87QDWEFC6"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H87QDWEFC6');
+ </script>
+</head>
+<body>
+
+<svg class="grain" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  <rect width="100%" height="100%" filter="url(#noise)" opacity="0.3"/>
+</svg>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<!-- 00 · прелоадер -->
+<div class="loader" id="loader">
+  <div class="loader__label">для<br>Манзуры</div>
+  <div class="loader__count" id="count">00</div>
+  <div class="loader__bar" id="bar"></div>
+</div>
+
+<!-- 01 · привет -->
+<section class="hero">
+  <div class="eyebrow">01 — привет</div>
+  <h1 class="display"><span class="misreg" data-text="Привет">Привет</span><br><span class="misreg" data-text="Манзураа">Манзураа</span></h1>
+  <div class="hero__row">
+    <p class="hero__sub">Хочу пригласить тебя на встречу&nbsp;😊</p>
+    <figure class="plate">
+      <img src="hero.gif" alt="Date GIF Image" decoding="async">
+      <figcaption>это я сейчас</figcaption>
+    </figure>
+  </div>
+  <button class="scroll-cue" type="button" data-scroll-to="#gifts">
+    <span>листай вниз</span><span aria-hidden="true">↓</span>
+  </button>
+</section>
+
+<!-- 02 · заливка краской -->
+<section>
+  <div class="tag"><span>02 — приглашение</span><span>лично тебе</span></div>
+  <div class="mask-wrap">
+    <p class="mask-under display">Пойдем со мной на свидание?</p>
+    <div class="mask-fill" id="maskFill">
+      <p class="display">Пойдем со мной на свидание?</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · подарки -->
+<section class="h-outer" id="gifts">
+  <div class="h-track" id="hTrack">
+
+    <article class="track-intro">
+      <div class="eyebrow">03 — подарки</div>
+      <p class="track-intro__lead display gift-hint" data-hover="Наведи курсор" data-touch="Нажимай на подарки">Наведи курсор</p>
+    </article>
+
+    <article class="gift-card">
+      <div class="gift-card__num">01</div>
+      <h2>Это я если ты согласишься 🥳</h2>
+      <div class="gift" id="gift-happy" data-reveal="happy.gif"
+           role="button" tabindex="0" aria-label="Открыть подарок: это я если ты согласишься">
+        <div class="gift__reveal"></div>
+        <span class="gift__badge" data-hover="открыть" data-touch="нажми">открыть</span>
+      </div>
+    </article>
+
+    <article class="gift-card">
+      <div class="gift-card__num">02</div>
+      <h2>Одним словом ты 👇</h2>
+      <div class="gift" id="gift-genius" data-reveal="genius.gif"
+           role="button" tabindex="0" aria-label="Открыть подарок: одним словом ты">
+        <div class="gift__reveal"></div>
+        <span class="gift__badge" data-hover="открыть" data-touch="нажми">открыть</span>
+      </div>
+    </article>
+
+    <article class="gift-card">
+      <div class="gift-card__num">03</div>
+      <h2>Еще ты красивая очень 💪</h2>
+      <div class="gift" id="gift-badass" data-reveal="badass.gif"
+           role="button" tabindex="0" aria-label="Открыть подарок: еще ты красивая очень">
+        <div class="gift__reveal"></div>
+        <span class="gift__badge" data-hover="открыть" data-touch="нажми">открыть</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- 04 · вопрос -->
+<section class="invert" data-theme="dark">
+  <div>
+    <div class="tag"><span>04 — вопрос</span><span>только два варианта</span></div>
+    <h2 class="display split" id="split">Пойдем? 👉👈</h2>
+  </div>
+</section>
+
+<!-- 05 · выбор -->
+<section class="cta">
+  <div class="eyebrow">05 — выбор</div>
+  <div class="choice" id="choice">
+    <button class="btn btn-yes" id="btn-yes" type="button">Да</button>
+    <button class="btn btn-no" id="noButton" type="button">Нет</button>
+  </div>
+  <p class="footer-note">Девушке с красивыми глазами))</p>
+</section>
+
+<footer>
+  <span>4ManuU</span>
+  <span>краски расходятся от скорости скролла</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
